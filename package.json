@@ -1,9 +1,18 @@
 {
   "name": "my-mcp-server",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc && node -e \"require('fs').chmodSync('build/main.js', '755')\""
   },
   "author": "Yuta Ohira <ohira_yuta@cyberagent.co.jp>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "valibot": "^1.0.0-beta.9"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
 }
